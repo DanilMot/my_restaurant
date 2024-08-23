@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link type="text/css" rel="stylesheet" href="/static/rest.css">
+    <link type="text/css" rel="stylesheet" href="/static/button.css">
+</head><style type="text/css">
+
+</style>
+
+<body class="cont_internal">
+<h2 align="center">Главное меню</h2>
+    <main>
+        <br><br>
+        <br><br>
+        <p align="center">
+            <a href="{{ url_for('bp_basket.choise_table') }}">
+            <button class="btn" type="button"> Сделать заказ </button>
+        </a>
+            <br><br>
+            <br><br>
+            <br><br>
+        <a href="/exit">
+            <button class="btn" type="button">  Выход из системы</button>
+        </a>
+        </p>
+    </main>
+
+</body>
+</html>

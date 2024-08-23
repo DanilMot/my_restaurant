@@ -1,0 +1,1 @@
+select * from waitress where month(on_date)<='$input_month' and year(on_date)<='$input_year'

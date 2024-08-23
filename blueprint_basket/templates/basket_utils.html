@@ -1,0 +1,52 @@
+{% macro render_item(item, key, show_form=False, show_amount=False) %}
+
+<div class="utils">
+    {% if show_form %}
+        <p align="center">
+            <span>Название</span>
+            <span class="name">{{ item['blud_name'] }}</span>
+            <span>Цена</span>
+            <span class="name">{{ item['price'] }}</span>
+            <span>Вес, г</span>
+            <span class="name">{{ item['weight'] }}</span>
+        </p>
+        <div align="center">
+        <form method="POST" action="">
+            <input type="hidden" class="c-button" name="id_bludo" value="{{ item['id_bludo'] }}">
+            <input class="c-button" type="submit" name="send" value="Купить">
+        </form>
+        </div>
+    {% endif %}
+
+    {% if show_amount %}
+        {% if item[key]['blud_amount'] > 1 %}
+                <p align="center">
+                <span>Название</span>
+                <span class="name">{{ item[key]['blud_name'] }}</span>
+                <span>Цена</span>
+                <span class="name">{{ item[key]['price'] }}</span>
+                <span>Количество</span>
+                <span class="name">{{ item[key]['blud_amount'] }}</span>
+                </p>
+                <form align="center" action="" method="POST">
+                    <input class="c-button" type="submit" name="send" value="Уменьшить количество">
+                    <input type="hidden" name="id_bludo_del" value="{{ key }}">
+                </form>
+        {% elif item[key]['blud_amount'] == 1 %}
+                <p align="center">
+                <span>Название</span>
+                <span class="name">{{ item[key]['blud_name'] }}</span>
+                <span>Цена</span>
+                <span class="name">{{ item[key]['price'] }}</span>
+                <span>Количество</span>
+                <span class="name">{{ item[key]['blud_amount'] }}</span>
+                </p>
+                <form align="center" action="" method="POST">
+                    <input class="c-button" type="submit" name="send" value="Удалить блюдо">
+                    <input  type="hidden" name="id_bludo_del" value="{{ key }}">
+                </form>
+        {% endif %}
+    {% endif %}
+</div>
+
+{% endmacro %}

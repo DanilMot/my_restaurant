@@ -1,0 +1,1 @@
+select w_name, passport, birthday, on_date, off_date from waitress where w_name='$input_name'

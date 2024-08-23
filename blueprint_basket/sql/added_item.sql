@@ -1,0 +1,1 @@
+select blud_name, price FROM menu WHERE id_bludo='$id_bludo'

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание отчета</title>
+    <link type="text/css" rel="stylesheet" href="/static/rest.css">
+    <link type="text/css" rel="stylesheet" href="/static/button.css">
+</head>
+<body>
+  <h2 align="center">Отчёт за выбранный период</h2>
+    <div align = center class="container_auth">
+        <form action="" method ="POST">
+            <label class="text-field__label" for="date_sale">Введите месяц и год</label>
+            <input class="text-field__input" name = date_numb id="date_sale" type = month placeholder = date_numb>
+            <br>
+            <input class="btn" type = submit value ="Отправить">
+        </form>
+    </div>
+    <p align="center">
+        <a href="{{ url_for('bp_report.start_report') }}">
+            <button class="btn" type="button"> Вернуться в меню отчётов</button>
+        </a>
+    </p>
+    <br><br>
+<h2 align="center">{{ message }}</h2>
+</body>
+</html>

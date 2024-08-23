@@ -1,0 +1,1 @@
+SELECT id_bludo, blud_name, price, weight from menu

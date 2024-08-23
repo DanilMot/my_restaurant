@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Оформление заказа</title>
+        <link type="text/css" rel="stylesheet" href="/static/rest.css">
+        <link type="text/css" rel="stylesheet" href="/static/button.css">
+    </head>
+
+    <body>
+
+       <main>
+            <div class="cont_internal">
+                <form method="post" action="">
+                        <div class="col" align="center">
+                            <label for="tab_id">Выберите какой стол обслуживается</label>
+                            <select class="form-control" id="tab_id" name="tab_id">
+
+                                {% for item in tab_id %}
+                                <option value="{{item['tab_id']}}">{{item['tab_id']}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    <div align="center">
+                        <input type="submit" class="btn" value="Продолжить заказ">
+                    </div>
+                </form>
+            </div>
+       </main>
+        <p align="center">
+            <a href={{url_for('menu_choice')}}>
+            <button type="button" class="btn2">Вернуться в главное меню</button>
+            </a>
+            <!--<a href={{url_for('menu_choice')}}> Вернуться в главное меню </a>-->
+        </p>
+    </body>
+</html>

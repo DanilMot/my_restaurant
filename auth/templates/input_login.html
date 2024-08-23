@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentification</title>
+    <link type="text/css" rel="stylesheet" href="/static/rest.css">
+    <link type="text/css" rel="stylesheet" href="/static/button.css">
+</head>
+<body>
+    <h1 align="center"> Введите логин и пароль</h1> <br><br>
+    <div align = "center" class="container_auth">
+        <form method="post" action="">
+            <div align="left" class="text-field">
+            <label for="login" class="text-field__label" > Логин</label>
+            <input class="text-field__input" type="text" id="login" name="login" placeholder="login" required> <br>
+            <label for="password" class="text-field__label"> Пароль</label>
+            <input class="text-field__input" type="text" id="password" name="password"  placeholder="password" required> <br>
+            <input type="submit" class="btn" value="Отправить">
+            <input type="reset" class="btn" value="Очистить">
+            </div>
+        </form>
+        <br><br>
+        <h2 align="center">{{message}}</h2>
+    </div>
+</body>
+</html>

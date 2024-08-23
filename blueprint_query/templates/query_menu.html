@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Меню запросов</title>
+    <link type="text/css" rel="stylesheet" href="/static/rest.css">
+    <link type="text/css" rel="stylesheet" href="/static/button.css">
+</head>
+
+<body class="cont_internal">
+<h2 align="center">Меню запросов</h2>
+    <main>
+        <br><br>
+        <br><br>
+            <p align="center">
+                <a href="{{ url_for('bp_query.queries') }}">
+                    <button class="btn" type="button"> Информация о блюде</button>
+                </a>
+                <a href="{{ url_for('bp_query.waitres') }}">
+                    <button class="btn" type="button"> Информация об официантах</button>
+                </a>
+                <a href="{{ url_for('bp_query.kolvo') }}">
+                    <button class="btn" type="button"> Количество заказов у официантов</button>
+                </a>
+                <a href="{{ url_for('bp_query.null') }}">
+                    <button class="btn" type="button"> Официанты без заказов</button>
+                </a>
+        <!--    <a href="{{ url_for("bp_query.queries") }}">Информация о блюде</a> <br><br>
+            <a href="{{ url_for("bp_query.waitres") }}">Информация об официантах</a> <br><br>
+            <a href="{{ url_for("bp_query.queries") }}">Количество заказов за последний месяц</a> <br><br>-->
+            </p>
+            <br><br>
+            <br><br>
+        <p align="center">
+            <a href="{{ url_for('menu_choice') }}">
+                    <button class="btn" type="button" > Нажмите для возврата на главную страницу</button>
+            </a>
+            <!--<a href="{{ url_for('menu_choice') }}"> Нажмите для возврата на главную страницу</a>-->
+        </p>
+    </main>
+
+</body>
+</html>

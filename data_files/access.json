@@ -1,0 +1,11 @@
+{
+  "admin": [
+    "bp_report.create_rep1"
+  ],
+  "manager": [
+    "bp_query"
+  ],
+  "external": [
+    "bp_basket"
+  ]
+}

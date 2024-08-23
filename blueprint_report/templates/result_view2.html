@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат поиска продукта</title>
+    <link type="text/css" rel="stylesheet" href="/static/rest.css">
+    <link type="text/css" rel="stylesheet" href="/static/button.css">
+    <link type="text/css" rel="stylesheet" href="/static/table.css">
+</head>
+<body>
+ <h1 align="center"> Отчет о работающих официантах за {{ mon }} месяц {{ yea }} года </h1> <br><br>
+    <table align="center" border = 1 width = 80%>
+            <tr>
+            <th> Уникальный номер </th>
+            <th> Номер официанта </th>
+            <th> ФИО официанта </th>
+            <th> Начало работы </th>
+            </tr>
+        {% for line in result %}
+          <tr>
+           {% for column in line %}
+            <td align = 'center'> {{column}} </td>
+           {% endfor %}
+         </tr>
+        {% endfor %}
+    </table> <br><br>
+      <p align="center">
+        <a href="{{ url_for('bp_report.start_report') }}">
+            <button class="btn" type="button"> Вернуться в меню отчётов</button>
+        </a>
+    </p>
+</body>
+</html>

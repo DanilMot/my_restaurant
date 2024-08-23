@@ -1,0 +1,1 @@
+select * from restaurant.menu where blud_name='$input_product'

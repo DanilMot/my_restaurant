@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <link type="text/css" rel="stylesheet" href="/static/rest.css">
+    <link type="text/css" rel="stylesheet" href="/static/button.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div align="center" class="cointainer2">
+        <form action="{{ url_for('bp_basket.save_order') }}" method="POST">
+            <input  type="submit"  value="Оформить заказ">
+            <input  type="button" value="В главное меню" onclick="location.href='/'">
+        </form>
+</div>
+
+{% import 'basket_utils.html' as utils %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2> Товары для покупки </h2>
+            {% for item in items %}
+                {{ utils.render_item(item, 0, show_form=True, show_amount=False) }}
+            {% endfor %}
+        </div>
+        <div class="col-md-6">
+            <h2> Корзина </h2>
+            {% if basket %}
+                {% for key in basket %}
+                    {% if basket[key]['blud_amount'] != 0 %}
+                        {{ utils.render_item(basket, key, show_form=False, show_amount=True) }}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <h2> Корзина пуста </h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

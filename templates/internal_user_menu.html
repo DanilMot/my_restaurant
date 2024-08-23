@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link type="text/css" rel="stylesheet" href="/static/rest.css">
+    <link type="text/css" rel="stylesheet" href="/static/button.css">
+</head>
+
+
+<body class="cont_internal">
+<h2 align="center">Главное меню</h2>
+    <main>
+        <br><br>
+        <br><br>
+        <p align="center">
+            <a href="{{ url_for('bp_query.query_menu') }}">
+            <button class="btn" type="button"> Работа с запросами </button>
+        </a>
+        <a href="{{ url_for('bp_report.start_report') }}">
+            <button class="btn" type="button">  Работа с отчетами </button>
+        </a>
+
+            <br><br>
+            <br><br>
+            <br><br>
+        <a href="/exit">
+            <button class="btn" type="button">  Выход из системы</button>
+        </a>
+        </p>
+    </main>
+
+</body>
+</html>

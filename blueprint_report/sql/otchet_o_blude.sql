@@ -1,0 +1,1 @@
+select * from restaurant.user_zakaz where year(order_date) = '$input_year' and month(order_date)='$input_month'

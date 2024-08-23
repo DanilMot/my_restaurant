@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="/static/rest.css">
+    <link type="text/css" rel="stylesheet" href="/static/button.css">
+</head>
+<body class="cont_internal">
+    <h2 align = center>Меню работы с отчетами</h2><br><br>
+    <center>
+        {% for report in report_list %}
+        <div class="reports">
+            <form action='' method = 'POST'>
+                <label for="create_rep" class="text-field__label">{{report['rep_name']}}</label>
+                <input class="btn" type="submit" name="create_rep" id=create_rep value="Создать">
+                <input class="btn" type="submit" name="view_rep" id=view_rep value="Смотреть">
+                <input type="hidden" name="rep_id" value={{report['rep_id']}}>
+            </form>
+        <br><br>
+        </div>
+        {% endfor %}
+            <br><br><br><br>
+        <a href="{{url_for('menu_choice')}}">
+            <button class="btn" type="button" > Возврат в главное меню</button>
+        </a><br><br>
+    </center>
+</body>
+</html>

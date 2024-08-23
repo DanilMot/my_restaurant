@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Просмотр отчета</title>
+    <link type="text/css" rel="stylesheet" href="/static/rest.css">
+    <link type="text/css" rel="stylesheet" href="/static/button.css">
+    <link type="text/css" rel="stylesheet" href="/static/table.css">
+</head>
+<body >
+ <h2 align="center"> Отчет по блюдам за {{ mon }} месяц {{ yea }} года </h2> <br><br>
+    <table align="center" border = 1 width = 80%>
+            <tr>
+                <th> Уникальный номер </th>
+                <th> Количество </th>
+                <th> Прибыль </th>
+                <th> Название блюда </th>
+            </tr>
+        {% for line in result %}
+          <tr>
+           {% for column in line %}
+            <td> {{column}} </td>
+           {% endfor %}
+         </tr>
+        {% endfor %}
+    </table> <br><br>
+      <p align="center">
+        <a href="{{ url_for('bp_report.start_report') }}">
+            <button class="btn" type="button"> Вернуться в меню отчётов</button>
+        </a>
+    </p>
+</body>
+</html>

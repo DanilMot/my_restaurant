@@ -1,0 +1,141 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+body{
+    background-image: url(/static/fon2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+h1 {
+    font-size: 28pt;
+    color: black;
+    font-weight: bold;
+}
+h5 {
+    font-size: 28pt;
+    color: black;
+    font-weight: bold;
+}
+
+label {
+    font-size: 15pt;
+    color: black;
+}
+
+
+#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.container{
+align-self: center;
+font-size:15pt;
+padding-top: 70px;
+max-width:250px;
+}
+
+.cointainer1{
+    background-image: url(/static/index.png);
+    background-size: cover;
+    margin: 0;
+    align-self: center;
+    padding-top: 125px;
+}
+
+.cointainer2{
+    align-self: center;
+    padding-top: 30px;
+}
+.cont_internal{
+    align-self: center;
+    padding-top: 250px;
+   }
+
+.container_auth{
+    align-self: center;
+    padding-top: 100px;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"] {
+  font-family: Moniqa; /* 1 */
+  font-size: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+.text-field {
+  margin-bottom: 1rem;
+  align-self: left;
+}
+/* стили для label */
+.text-field__label {
+  font-size: 15pt;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+/* стили для input */
+.text-field__input {
+  display: block;
+  width: 250px;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-family: Moniqa;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-field__input::placeholder {
+  color: #212529;
+  opacity: 0.4;
+}
+
+.text-field__input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #00FF00;
+  outline: 1;
+  outline-color: #00FF00;
+  outline-weight: 2px;
+}
+
+span{
+font-size: 14pt;
+}
+
+.name{
+font-size: 14pt;
+font-weight:bold;
+color: blueviolet;
+}
+
+.utils{
+border-style: solid;
+border-color: black;
+margin: 5px;
+background:white;
+border-radius:15px;
+}
+
+.reports{
+width: 400px;
+max-height:100px;
+border-style: solid;
+border-color: black;
+margin: 10px;
+background:white;
+border-radius:15px;
+}

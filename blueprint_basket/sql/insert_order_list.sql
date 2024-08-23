@@ -1,0 +1,1 @@
+insert zakaz_list values(NULL, '$order_id', '$id_bludo', '$blud_amount', '$am_price')

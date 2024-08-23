@@ -1,0 +1,1 @@
+select otch_id,zak_num,gain, blud_name from restaurant.otchet where rep_year='$input_year' and rep_month='$input_month'
